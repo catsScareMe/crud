@@ -23,7 +23,7 @@ class App extends React.Component {
 
   getLists() {
     this.setState({ loading: true }, () => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
+      fetch("http://localhost:3000/posts")
         .then((res) => res.json())
         .then((result) =>
           this.setState({
@@ -50,7 +50,7 @@ class App extends React.Component {
   }
 
   createList() {
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch("http://localhost:3000/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -75,7 +75,7 @@ class App extends React.Component {
         }
       },
       () => {
-        fetch("https://jsonplaceholder.typicode.com/posts/" + id)
+        fetch("http://localhost:3000/posts/" + id)
           .then((res) => res.json())
           .then((result) => {
             this.setState({
@@ -90,7 +90,7 @@ class App extends React.Component {
   }
 
   updateList(event, id) {
-    fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
+    fetch("http://localhost:3000/posts/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -110,7 +110,7 @@ class App extends React.Component {
   }
 
   deleteList(event, id) {
-    fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
+    fetch("http://localhost:3000/posts/" + id, {
       method: "DELETE"
     })
       .then((res) => res.json())
