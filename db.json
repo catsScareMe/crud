@@ -1,0 +1,18 @@
+{
+  "posts": [
+    
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "Frozen Coke",
+    "author": "Ice Cream"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "Chocolate",
+    "author": "Devil's Saints"
+  }
+]
+
+}
